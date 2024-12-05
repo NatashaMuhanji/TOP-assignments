@@ -32,28 +32,28 @@
 
     <script>
 
-        let input = document.querySelector("input");
-        let button = document.querySelector("button");
-        let list = document.querySelector("ul");
-
-        let newItem = document.createElement("li");
-        let item = document.createElement("span");
-        let deleteItem = document.createElement("button");
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        const list = document.querySelector("ul");
 
         button.addEventListener("click", () => { 
             const listItem = input.value;
             input.value = '';
-            item.textContent = listItem;
-        });
 
-        list.append(newItem);
+            const newItem = document.createElement("li");
+        const item = document.createElement("span");
+        const deleteItem = document.createElement("button");
+
         newItem.appendChild(item);
-        newItem.appendChild(deleteItem);
-        
+        item.textContent = listItem;
+        newItem.appendChild(deleteItem);        
         deleteItem.textContent = "Delete Item";
 
+        list.appendChild(newItem);
+
         deleteItem.addEventListener("click", ()=> {
-            newItem.remove();
+            list.removeChild(newItem);
+        });
         });
         
 
