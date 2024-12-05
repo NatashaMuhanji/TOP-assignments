@@ -41,18 +41,17 @@
             input.value = '';
 
             const newItem = document.createElement("li");
-        const item = document.createElement("span");
-        const deleteItem = document.createElement("button");
+            const item = document.createElement("span");
+            const deleteItem = document.createElement("button");
 
-        newItem.appendChild(item);
-        item.textContent = listItem;
-        newItem.appendChild(deleteItem);        
-        deleteItem.textContent = "Delete Item";
+            newItem.append(item, deleteItem);
+            item.textContent = listItem;       
+            deleteItem.textContent = "Delete Item";
 
-        list.appendChild(newItem);
+            list.append(newItem);
 
-        deleteItem.addEventListener("click", ()=> {
-            list.removeChild(newItem);
+            deleteItem.addEventListener("click", ()=> {
+               list.removeChild(newItem);
         });
         });
         
