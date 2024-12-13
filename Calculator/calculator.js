@@ -16,10 +16,13 @@ function modulus (a, b){
 function power (a, b){
     return Math.pow(a, b);
 }
-function factorial (c){
+function factorial (a){
     let product = 1;
-    for (let i = c; i > 0; i--){
+    for (let i = a; i > 0; i--){
         product *=i;
     }
     return product;
+}
+function operate (a, b, operator){
+    return operator(a,b);
 }
