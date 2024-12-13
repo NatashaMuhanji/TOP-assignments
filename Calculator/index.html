@@ -28,13 +28,14 @@
 
       <button class="button" onclick="appendToDisplay('0')">0</button>
       <button class="button" onclick="appendToDisplay('.')">.</button>
-      <button class="button" onclick="calculate()">=</button>
+      <button class="button" onclick="setOperator('^')">^</button>
       <button class="button" onclick="setOperator('/')">/</button>
 
-      <button class="button" onclick="setOperator('^')">^</button>
+      <button class="button" onclick="setOperator('')">⚠</button>   <!-- blank button -->
       <button class="button" onclick="setOperator('!')">!</button>      
 
       <!-- Clear Button -->
+       <button class="button" onclick="calculate()">=</button>
       <button class="button clear" onclick="clearDisplay()">C</button>
     </div>
   </div>
